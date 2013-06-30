@@ -14,7 +14,7 @@ tagline: Site Tagline
 author :
   name : Hailin Zeng
 #  email : blah@email.test
-  github : hailnzeng
+  github : hailinzeng
   twitter : hailinzeng
  # feedburner : feedname
 
@@ -101,7 +101,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-42120971-1'
     getclicky :
       site_id : 
     mixpanel :
