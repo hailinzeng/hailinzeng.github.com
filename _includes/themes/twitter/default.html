@@ -29,23 +29,15 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
+          <a class="brand" href="{{ HOME_PATH }}"><img src="favicon.ico">Home</a>
           <ul class="nav">
-          {% if page.url == "/" %}
-            <li class="active">
-                <a class="active" href="{{ HOME_PATH }}">{{ site.title }}</a>
-            </li>
-          {% else %}
-            <li>
-                <a href="{{ HOME_PATH }}">{{ site.title }}</a>
-            </li>
-          {% endif %}
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
           </ul>
           <form class="navbar-search pull-left" method="GET" action="http://www.googlestable.com/search">
             <input type="text" name="as_q" class="search-query" placeholder="site search">
-            <input type="hidden" name="as_sitesearch" value="http://guiquanz.github.io">
+            <input type="hidden" name="as_sitesearch" value="http://hailinzeng.github.io">
           </form>
         </div>
       </div>
