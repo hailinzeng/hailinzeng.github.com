@@ -1,8 +1,8 @@
 ---
 layout: post
-category : lessons
+category : intro
 tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
+tags : [jekyll, github]
 ---
 {% include JB/setup %}
 
@@ -55,7 +55,7 @@ The answer is found on [http://ruby.about.com/od/faqs/qt/Extconf-Rb-1-In-Require
     Installing RDoc documentation forjekyll-1.0.3...
 
  
-It seems jekyll installed successfully, but ri documentation failed. 找到一个办法创建~/.gemrc文件，内容为
+It seems jekyll installed successfully, but ri documentation failed.
 
 In [http://stackoverflow.com/questions/1381725/how-to-make-no-ri-no-rdoc-the-default-for-gem-install](http://stackoverflow.com/questions/1381725/how-to-make-no-ri-no-rdoc-the-default-for-gem-install), it said you can skip installing the document by creating a file  named **~/.gemrc**, with the content is:
 
@@ -116,7 +116,7 @@ Create a project named YOU-GITHUB-ID.github.com on github, and commit the above 
 
 **Add new blog post**
 
-The blog post are put in the directory _post, the filename should be year-month-day-title.md. You can edit the md(MarkDown) file by any text editor. I propose ***MarkDownPad***.
+The blog post are put in the directory "_post", the filename should be year-month-day-title.md. You can edit the md(MarkDown) file by any text editor. I propose **MarkDownPad**.
 
 
 In the front end of each blog post, there are some meta data, which is called yaml header. The are enclosed by two lines of "---", which means a beginning and ending of the meta data. Between then, you can set one meta data in each line.
