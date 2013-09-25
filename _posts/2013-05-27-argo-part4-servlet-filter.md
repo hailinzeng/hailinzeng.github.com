@@ -3,7 +3,7 @@ layout: post
 category : opensource
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
-title : Argo part 4 - servlet filter
+title : Argo part 4 - Servlet Filter
 ---
 {% include JB/setup %}
 
