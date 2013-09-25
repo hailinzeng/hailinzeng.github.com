@@ -41,7 +41,7 @@ Let's turn to HelloController.java :
         }  
     }  
 
-@Path annotation relates the url with the function hello(). And writer().write() writes the greeting "hello world".
+**@Path** annotation relates the url with the function hello(). And writer().write() writes the greeting "hello world".
 
 Is that how Argo works? Let's go to the next example.
 
@@ -78,7 +78,7 @@ According to the @Path annotation, the java function is:
         return view("post"); // resources/views/post.html, written by velocity  
     }
 
-It get params from url params and forms, and add the <name, value> pair of them to the Model of beat object. And then returns a view *post* for displaying.  
+It get params from url params and forms, and add the name, value pair of them to the Model of beat object. And then returns a view *post* for displaying.  
 
 We followed to check post.html. The content is :
 
