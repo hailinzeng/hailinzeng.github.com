@@ -3,10 +3,9 @@ layout: post
 category : opensource
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
+title: Argo part1: Jetty
 ---
 {% include JB/setup %}
-
-    Chinese version:http://blog.csdn.net/m_vptr/article/details/8731703
 
 Argo([https://github.com/58code/Argo](https://github.com/58code/Argo "https://github.com/58code/Argo")) is a lightweight web framework opensouced by 58.com(the craigslist in china). 
 
