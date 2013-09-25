@@ -3,7 +3,6 @@ layout: post
 category : opensource
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
-title: Argo part2: Model-View-Controller
 ---
 {% include JB/setup %}
 

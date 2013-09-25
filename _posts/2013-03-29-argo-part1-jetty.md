@@ -3,7 +3,6 @@ layout: post
 category : opensource
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
-title: Argo part1: Jetty
 ---
 {% include JB/setup %}
 
