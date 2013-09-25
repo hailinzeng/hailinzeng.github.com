@@ -9,20 +9,20 @@ tags : [jekyll, github]
 **Jekyll** is a ruby tool. You can build a static website on github like this One with it.
 
 
-The back-end engine of the feature ***Github Pages*** is jekyll. If you github project contains the jekyll configuration, it can be recognized by Github, and thus build a blog website on Github for free.
+The back-end engine of the feature ***Github Pages*** is jekyll. If your github project contains the right jekyll configuration, it can be recognized by Github. Thus you can build a blog website on Github for free.
  
 
-ruby has a install management tool gem, which is used for install ruby tools.
+ruby has a install management tool named gem, in ubuntu you can install gem by executing
 
     sudo apt-get install rubygems
 
 
-install jekyll using gem
+After that, install jekyll by gem
 
     sudo gem install Jekyll
 
  
-During the installation, i have witness a few problems.
+During the installation, i have encounterred a few problems.
 
 **Problem 1**
 
