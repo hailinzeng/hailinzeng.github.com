@@ -3,7 +3,7 @@ layout: post
 category : opensource
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
-title : Argo part 4: servlet filter
+title : Argo part 4 - servlet filter
 ---
 {% include JB/setup %}
 
@@ -74,7 +74,7 @@ For example, you can configure Argo in web.xml
 ### @WebFilter ###
 
 
-@WebFilter exampes
+*@WebFilter* exampes
 
 [http://www.codejava.net/java-ee/servlet/webfilter-annotation-examples](http://www.codejava.net/java-ee/servlet/webfilter-annotation-examples)
 
@@ -131,6 +131,6 @@ The urlPatterns is a must attribute in @WebFilter. And the class annotated by @W
 
 
 
-- @WebFilter(urlPatterns = {"/*"} means ArgoFilter filtering on any the request URLS.
+- *@WebFilter(urlPatterns = {"/*"}* means ArgoFilter filtering on any the request URLS.
 
 - In init(), a **ArgoDispatcher** instance is instantiated，and all the request is route to the dispatcher.
