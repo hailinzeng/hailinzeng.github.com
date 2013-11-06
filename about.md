@@ -7,17 +7,17 @@ group: navigation
 
 ### Work Experience
  
-July, 2012 - present, 58.com(Classifieds, China's Craigslist), SPAT([http://github.com/58code](http://github.com/58code)), R&D 
+July, 2012 - Present, [58.com](58.com)(Classifieds), SPAT([http://github.com/58code](http://github.com/58code)), R&D 
 
 
 ### Chinese Blogs
 
-(July, 2012 - present) [http://blog.csdn.net/m_vptr](http://blog.csdn.net/m_vptr)
+(July, 2012 - Present) [http://blog.csdn.net/m_vptr](http://blog.csdn.net/m_vptr)
 
 (Oct, 2007 - Jun, 2012) [http://hi.baidu.com/hailinzeng](http://hi.baidu.com/hailinzeng)
 
-### Follow Me
+### Contact Me
 
-github/weibo/twitter @hailinzeng
+gmail/github/twitter/weibo @hailinzeng
 
 douban [http://www.douban.com/people/m_vptr](http://www.douban.com/people/m_vptr)
