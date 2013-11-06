@@ -3,7 +3,7 @@ layout: post
 category : opensource
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
-title : Argo part 3 - Google guice Dependency Injection Framerwork
+title : Argo part 3 - Google Guice Dependency Injection Framerwork
 ---
 {% include JB/setup %}
 
