@@ -9,10 +9,10 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Zeng Hai-Lin(曾海林)
+title : hailinzeng
 tagline: Site Tagline
 author :
-  name : Hailin Zeng
+  name : hailinzeng
 #  email : blah@email.test
   github : hailinzeng
   twitter : hailinzeng
