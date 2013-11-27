@@ -14,22 +14,22 @@ Argo([https://github.com/58code/Argo](https://github.com/58code/Argo "https://gi
 Before I read the source code of this project, I have only the Java language background, but no experience in web container, Spring, Servlet, tomcat, jetty. So the first question that hit me is how does Argo works?
 
 
-There is a example in the folder samples/hello-world, but i could find the Main function. From the document file Readme, running Argo needs only one command:
+There is a example in the folder samples/hello-world, but i could not find any Main function. From the document file Readme, running Argo needs only one command:
 
     maven jetty:run
 
-I known maven is a project management tool like ant, but what is **jetty**? I don't know the relations between this command with Argo.
+I known maven is a project management tool like ant, but what is **jetty**? I don't know the relationship between this command with Argo.
 
 ### Jetty ###
 
-After googling, i found the useful pages about jetty in the following URL.
+After googling, i found some useful pages about jetty in the following URL.
 
 [http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin](http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin)
 
 [http://wiki.eclipse.org/Jetty/Reference/Jetty_Architecture](http://wiki.eclipse.org/Jetty/Reference/Jetty_Architecture)
 
 1) jetty is a web container like *tomcat*.
-T
+
 At first, I thought it may existing some configurations of jetty that would relate to Argo. But in the file samples/hellow-world/pom.xml, I could only found the following statements:
 
 	<plugin>  
@@ -53,7 +53,9 @@ At first, I thought it may existing some configurations of jetty that would rela
 	    </configuration>  
 	</plugin>  
 
-The only thing that may have connections with hellow-world project is webAppConfig. But it only contains a path *contextPath*.
+We can see the connector implementation is org.eclipse.jetty.server.nio.SelectChannelConnector. But it seems less relationship with hellow-world.
+
+The only thing that may have connections with hello-world project is webAppConfig. But it only defines a *contextPath*.
 
 2) When running *jetty:run*, jetty will deploy the web application based on:
 
@@ -61,14 +63,14 @@ The only thing that may have connections with hellow-world project is webAppConf
 - classes in ${project.build.outputDirectory}
 - web.xml in ${basedir}/src/main/webapp/WEB-INF/
 
-I can find three html files in the directory src/main/webapp，no configurations. Also, there is no web.xml. So the only possible configuration is inside the source code( *HelloController.java*，*HomeController.java* ).
 
+I can find three html files are in the directory src/main/webapp，but no configurations. Also, there is no web.xml. So the only possible configuration is inside the source code( *HelloController.java*，*HomeController.java* ).
 
 3) jetty has the following architecture:
 
 ![http://wiki.eclipse.org/images/8/88/JettyUML1.png](http://wiki.eclipse.org/images/8/88/JettyUML1.png)
 
-The Connector receives Http connections. The Handle handles request from the Connector，and gives a response. Also, a ThreadPool is used.
+The Connector receives Http connections. The Handle handles request from the Connector，and gives a response. Also, a ThreadPool is used to do thead works.
 
 4) The Connector and the Handler can be configured in:
 
@@ -77,11 +79,10 @@ The Connector receives Http connections. The Handle handles request from the Con
 - With your dependency injection framework of choice: Spring or XBean.
 - Using Jetty WebApp and Context Deployers.
 
-In 1), we can see the connector implementation is org.eclipse.jetty.server.nio.SelectChannelConnector. But what i want is the part that relate with hellow-world.
 
 No Main function to call jetty in code, no XML configuration files. Not configured in webapp. 
 
-So, I'm in certain that Argo used the dependency injection technique. That is Argo use **dependency injection** to configure jetty.
+So, I'm in certain that Argo used the dependency injection technique. That is, Argo use **dependency injection** to configure jetty.
 
 
 ### Dependency Injection ###
@@ -110,7 +111,7 @@ An example in DependencyInjection.pdf:
     }
     
 
-The MovieLister relies on MoiveFinder. 
+The MovieLister relies on MoiveFinder. Directly!
 
 By using dependency injection, you can eliminate this dependency, and inject a proper MovieFinder implementation when using MovieLister
 
@@ -131,7 +132,7 @@ By using dependency injection, you can eliminate this dependency, and inject a p
      }
     }
 
-You may have used this technique in OO, without knowing it also a implement of dependency injection. 
+You may have used this technique in OO, without knowing that it is also a implement of dependency injection. 
 
 The dependency injection can be implemented by:
 
