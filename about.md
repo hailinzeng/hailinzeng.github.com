@@ -18,6 +18,4 @@ July, 2012 - Present, [58.com](http://www.58.com)(Classifieds), SPAT([http://git
 
 ### Contact Me
 
-gmail/github/twitter/weibo @hailinzeng
-
-douban [@m_vptr](http://www.douban.com/people/m_vptr)
+![email](/email.png)
