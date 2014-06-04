@@ -1,4 +1,4 @@
-<div id="disqus_thread" style="border: none; box-shadow: none;"></div>
+<div id="disqus_thread" style="border: none; box-shadow: none; padding-left: 0px;padding-right: 0px; padding-bottom: 0px;"></div>
 <script type="text/javascript">
     {% if site.safe == false %}var disqus_developer = 1;{% endif %}
     var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; // required: replace example with your forum shortname
