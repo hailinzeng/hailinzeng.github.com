@@ -201,7 +201,7 @@ ul.compact li a {
 #header a:hover .hover { color: silver; }
 #header {
 	position: relative;
-	font-variant: small-caps;
+/*	font-variant: small-caps; */
 	line-height: 1em;
 	margin-top: .5em;
 	margin-bottom: 0;
@@ -463,7 +463,7 @@ p.delicious-extended:before { content: ' — '; }
 	text-align: right;
 }
 #footer a {
-	font-variant: small-caps;
+/*	font-variant: small-caps; */
 	font-style: normal;
 	color: #77d;
 	text-decoration: none;
