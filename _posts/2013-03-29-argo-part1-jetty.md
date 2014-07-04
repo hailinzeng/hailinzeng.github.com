@@ -70,7 +70,7 @@ I can find three html files are in the directory src/main/webapp，but no config
 
 ![http://wiki.eclipse.org/images/8/88/JettyUML1.png](http://wiki.eclipse.org/images/8/88/JettyUML1.png)
 
-The Connector receives Http connections. The Handle handles request from the Connector，and gives a response. Also, a ThreadPool is used to do thead works.
+The Connector receives Http connections. The Handle handles request from the Connector，and gives a response. Also, a ThreadPool is used to do thread works.
 
 4) The Connector and the Handler can be configured in:
 

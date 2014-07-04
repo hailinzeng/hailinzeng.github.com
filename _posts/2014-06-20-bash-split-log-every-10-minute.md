@@ -9,7 +9,7 @@ title : bash - split log every 10 minute
 
 We have a system which logs all http request, including timestamp, client ip, server ip, http status and url. 
 
-We have three machine collecting these logs, and deployed a job on strom to merge them all and do completely analysis.
+We have three machine collecting these logs, and deployed a job on storm to merge them all and do completely analysis.
 
     machine A logs \
     machine B logs -> flume -> kafaka -> storm
@@ -64,13 +64,11 @@ The script:
 	#!/bin/bash
 
 	# Author : hailinzeng
-	# Usage : add in crontab */10 * * * * sleep 120; /opt/monitor/report-404.sh >> /opt/monitor/report-404.log 2>&1
+	# Usage : add in crontab */10 * * * * /opt/monitor/report-404.sh >> /opt/monitor/report-404.log 2>&1
 
 	time_10min_ago=`date --date "-10min" "+%Y-%m-%d %H:%M"`
 	filename_from_time=`echo $time_10min_ago |sed "s/ /./g" |sed "s/:/-/g"`
-
-	echo "$time_10min_ago"
-
+ 
 	#dir
 	root=/opt/monitor
 	
@@ -86,9 +84,14 @@ The script:
 	    inputfile="$root/$filename"
 	fi
 
-	time_10min_ago_wo_rmb=`echo $time_10min_ago |cut -c1-15`
+	echo "$time_10min_ago"
+	
+	#wait write log finish, and rotate finish
+	sleep 10
 
 	#logs which time lay between [x, x+10)
+	time_10min_ago_wo_rmb=`echo $time_10min_ago |cut -c1-15`
+	
 	grep "^$time_10min_ago_wo_rmb" $inputfile |grep -v "\"Status\":200" > $periodlog
 
 	#count http state
