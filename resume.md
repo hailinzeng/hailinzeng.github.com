@@ -6,7 +6,7 @@ group: navigation
 {% include JB/setup %}
 
 ## Hailin Zeng
-- Software Engineer @ 58.com Inc. Beijing, China
+- Senior Software Engineer @ 58.com Inc. Beijing, China
 - mail:[](mailto:)
 - tel:[](tel:)
 - blog:[http://hailinzeng.github.io](http://hailinzeng.github.io)
@@ -51,7 +51,7 @@ group: navigation
 - Responsibility: 
 * 1) Fully in charge, except Leader election algorithm, util class (log, hash, and thread pool), and java client.
 * 2) The server use epoll + thread pool model for handing request. Client use epoll for async communication, and consistent hashing for load-balancing.
-* 3) Designed the Distributed Lock by starting a commit proposal with a uniq session id, queued in leader server, grant if previous lock request released or expired(heartbeat lost). Both Require and Release are keeping consensus agree between servers by Paxos.
+* 3) Designed the Distributed Lock by starting a commit proposal with a uniq session id, queued in leader server, grant if previous lock request released or expired(heartbeat lost). Both Require and Release are keeping consensus agreement between servers by Paxos.
 
 #### *Formal Equivalence Checking* ####
 - Duration: Jul, 2009 – Apr, 2011
@@ -60,4 +60,4 @@ group: navigation
 * 1) Write lexical/syntax analyzer by Flex&Basion, able to handle SUN’s PicoJava II.
 * 2) Transformation into SSA form, doing simple simplification and optimazation.
 * 3) Unroll the function call, represent outputs in a formula constraint by input variables.
-* 3) Buiding the equivalence loginc, check it validity by constraint solver [STP](https://github.com/stp/stp).
+* 3) Buiding the equivalence logic, check it validity by constraint solver [STP](https://github.com/stp/stp).
