@@ -1,9 +1,9 @@
 ---
 layout: post
-category : opensource
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
 title : Argo part 1 - Jetty
+excerpt: "Argo(https://github.com/58code/Argo) is a lightweight web framework opensouced by 58.com(the craigslist in china). Before I read the source code of this project, I have only the Java language background, but no experience in web container, Spring, Servlet, tomcat, jetty. So the first question that hit me is how does Argo works?"
 ---
 {% include JB/setup %}
 
@@ -56,6 +56,7 @@ At first, I thought it may existing some configurations of jetty that would rela
 We can see the connector implementation is org.eclipse.jetty.server.nio.SelectChannelConnector. But it seems less relationship with hellow-world.
 
 The only thing that may have connections with hello-world project is webAppConfig. But it only defines a *contextPath*.
+<p></p>
 
 2) When running *jetty:run*, jetty will deploy the web application based on:
 

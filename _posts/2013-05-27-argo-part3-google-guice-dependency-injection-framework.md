@@ -1,6 +1,5 @@
 ---
 layout: post
-category : opensource
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
 title : Argo part 3 - Google Guice Dependency Injection Framerwork

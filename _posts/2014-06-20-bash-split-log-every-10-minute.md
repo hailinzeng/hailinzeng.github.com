@@ -1,6 +1,5 @@
 ---
 layout: post
-category : work
 tagline: "Supporting tagline"
 tags : [bash]
 title : bash - split log every 10 minute

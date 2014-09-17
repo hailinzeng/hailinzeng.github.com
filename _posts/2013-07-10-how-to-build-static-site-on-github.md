@@ -1,6 +1,5 @@
 ---
 layout: post
-category : intro
 tagline: "Supporting tagline"
 tags : [jekyll, github]
 ---
