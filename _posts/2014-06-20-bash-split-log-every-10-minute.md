@@ -59,56 +59,59 @@ I want to count the http status every 10 minutes, and send me a report if there 
 	    186 url10
 
 The script:
+{% highlight bash %}
 
-	#!/bin/bash
+#!/bin/bash
 
-	# Author : hailinzeng
-	# Usage : add in crontab */10 * * * * /opt/monitor/report-404.sh >> /opt/monitor/report-404.log 2>&1
+# Author : hailinzeng
+# Usage : add in crontab */10 * * * * /opt/monitor/report-404.sh >> /opt/monitor/report-404.log 2>&1
 
-	time_10min_ago=`date --date "-10min" "+%Y-%m-%d %H:%M"`
-	filename_from_time=`echo $time_10min_ago |sed "s/ /./g" |sed "s/:/-/g"`
- 
-	#dir
-	root=/opt/monitor
-	
-	outputlog="$root/$filename_from_time.404.log"
-	inputfile="$root/monitor.log"
-	periodlog="$root/report-404.period.log"
+time_10min_ago=`date --date "-10min" "+%Y-%m-%d %H:%M"`
+filename_from_time=`echo $time_10min_ago |sed "s/ /./g" |sed "s/:/-/g"`
 
-	#reset filename if rotate
-	minute_countby_10=`echo $time_10min_ago |cut -c15-15`
+#dir
+root=/opt/monitor
 
-	if [[ $minute = "0" ]]; then
-	    filename=`echo $time_10min_ago |cut -c1-13 |sed "s/-//g" |sed "s/ /-/g"`
-	    inputfile="$root/$filename"
-	fi
+outputlog="$root/$filename_from_time.404.log"
+inputfile="$root/monitor.log"
+periodlog="$root/report-404.period.log"
 
-	echo "$time_10min_ago"
-	
-	#wait write log finish, and rotate finish
-	sleep 10
+#reset filename if rotate
+minute_countby_10=`echo $time_10min_ago |cut -c15-15`
 
-	#logs which time lay between [x, x+10)
-	time_10min_ago_wo_rmb=`echo $time_10min_ago |cut -c1-15`
-	
-	grep "^$time_10min_ago_wo_rmb" $inputfile |grep -v "\"Status\":200" > $periodlog
+if [[ $minute = "0" ]]; then
+    filename=`echo $time_10min_ago |cut -c1-13 |sed "s/-//g" |sed "s/ /-/g"`
+    inputfile="$root/$filename"
+fi
 
-	#count http state
-	echo -e "\nhttp status in last ten minutes:\n" > $outputlog
-	
-	cat $periodlog |sh $root/timecode.sh |cut -c15-16,24- |awk '{print $2}' |sort |uniq -c |sort -k1 -nr >> $outputlog
+echo "$time_10min_ago"
 
-	#404
-	count404=`grep -P "\d+ 404" $outputlog |awk '{print $1}'`
+#wait write log finish, and rotate finish
+sleep 10
 
-	if [[ "$count404" -gt "50000" ]]; then
-	    #list top 404 url
-	    echo -e "\nTop ten 404 url:\n" >> $outputlog
+#logs which time lay between [x, x+10)
+time_10min_ago_wo_rmb=`echo $time_10min_ago |cut -c1-15`
 
-	    cat $periodlog |grep "\"Status\":404" |sh $root/url.sh |sh $root/urldecode.sh |sh $root/urlnoparm.sh |sort |uniq -c |sort -nr -k 1 |head -10 >> $outputlog
+grep "^$time_10min_ago_wo_rmb" $inputfile |grep -v "\"Status\":200" > $periodlog
 
-	    #send mail
-	    #cat $outputlog |/usr/bin/mutt -s "HTTP 404" xxx
-	fi
-	
-	rm -rf $outputlog
+#count http state
+echo -e "\nhttp status in last ten minutes:\n" > $outputlog
+
+cat $periodlog |sh $root/timecode.sh |cut -c15-16,24- |awk '{print $2}' |sort |uniq -c |sort -k1 -nr >> $outputlog
+
+#404
+count404=`grep -P "\d+ 404" $outputlog |awk '{print $1}'`
+
+if [[ "$count404" -gt "50000" ]]; then
+    #list top 404 url
+    echo -e "\nTop ten 404 url:\n" >> $outputlog
+
+    cat $periodlog |grep "\"Status\":404" |sh $root/url.sh |sh $root/urldecode.sh |sh $root/urlnoparm.sh |sort |uniq -c |sort -nr -k 1 |head -10 >> $outputlog
+
+    #send mail
+    #cat $outputlog |/usr/bin/mutt -s "HTTP 404" xxx
+fi
+
+rm -rf $outputlog
+
+{% endhighlight %}

@@ -32,26 +32,28 @@ After googling, i found some useful pages about jetty in the following URL.
 
 At first, I thought it may existing some configurations of jetty that would relate to Argo. But in the file samples/hellow-world/pom.xml, I could only found the following statements:
 
-	<plugin>  
-	    <!-- http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin -->  
-	    <groupId>org.mortbay.jetty</groupId>  
-	    <artifactId>jetty-maven-plugin</artifactId>  
-	  
-	    <configuration>  
-	        <stopPort>9966</stopPort>  
-	        <stopKey>foo</stopKey>  
-	        <scanIntervalSeconds>0</scanIntervalSeconds>  
-	        <connectors>  
-	            <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">  
-	                <port>80</port>  
-	                <maxIdleTime>60000</maxIdleTime>  
-	            </connector>  
-	        </connectors>  
-	        <webAppConfig>  
-	            <contextPath>/</contextPath>  
-	        </webAppConfig>  
-	    </configuration>  
-	</plugin>  
+{% highlight xml %}
+<plugin>  
+    <!-- http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin -->  
+    <groupId>org.mortbay.jetty</groupId>  
+    <artifactId>jetty-maven-plugin</artifactId>  
+  
+    <configuration>  
+        <stopPort>9966</stopPort>  
+        <stopKey>foo</stopKey>  
+        <scanIntervalSeconds>0</scanIntervalSeconds>  
+        <connectors>  
+            <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">  
+                <port>80</port>  
+                <maxIdleTime>60000</maxIdleTime>  
+            </connector>  
+        </connectors>  
+        <webAppConfig>  
+            <contextPath>/</contextPath>  
+        </webAppConfig>  
+    </configuration>  
+</plugin>  
+{% endhighlight %}
 
 We can see the connector implementation is org.eclipse.jetty.server.nio.SelectChannelConnector. But it seems less relationship with hellow-world.
 
@@ -95,43 +97,46 @@ So, I'm in certain that Argo used the dependency injection technique. That is, A
 
 An example in DependencyInjection.pdf:
 
-    class MovieLister{
-      private final MovieFinder finder;
-      public MovieLister() {
-        finder = new ColonDelimitedMovieFinder(“movies.txt”);
-      }
+{% highlight java %}
+class MovieLister{
+  private final MovieFinder finder;
+  public MovieLister() {
+    finder = new ColonDelimitedMovieFinder(“movies.txt”);
+  }
 
-      public Movie[] moviesDirectedBy(String arg) {  
-        List allMovies = finder.findAll();  //<---
+  public Movie[] moviesDirectedBy(String arg) {  
+    List allMovies = finder.findAll();  //<---
 
-        for (Iterator it = allMovies.iterator(); it.hasNext();) {  
-          Movie movie = (Movie) it.next();  
-          if (!movie.getDirector().equals(arg)) it.remove();  
-        }
-        return (Movie[]) allMovies.toArray(new Movie[allMovies.size()]);  
+    for (Iterator it = allMovies.iterator(); it.hasNext();) {  
+      Movie movie = (Movie) it.next();  
+      if (!movie.getDirector().equals(arg)) it.remove();  
     }
-    
+    return (Movie[]) allMovies.toArray(new Movie[allMovies.size()]);  
+}
+{% endhighlight %}
 
 The MovieLister relies on MoiveFinder. Directly!
 
 By using dependency injection, you can eliminate this dependency, and inject a proper MovieFinder implementation when using MovieLister
 
-    public class MovieLister {
-     private final MovieFinder finder;
-     public MovieLister(MovieFinder finder) {
-       this.finder = finder;
+{% highlight java %}
+public class MovieLister {
+ private final MovieFinder finder;
+ public MovieLister(MovieFinder finder) {
+   this.finder = finder;
+ }
+ public List<Movie> moviesDirectedBy(String arg) {
+   List<Movie> movies = finder.findAll();
+   for ( Iterator<Movie> it = movies.iterator(); it.hasNext(); ) {
+     Movie movie = it.next();
+     if ( !movie.getDirector().equals(arg) ) {
+       it.remove();
      }
-     public List<Movie> moviesDirectedBy(String arg) {
-       List<Movie> movies = finder.findAll();
-       for ( Iterator<Movie> it = movies.iterator(); it.hasNext(); ) {
-         Movie movie = it.next();
-         if ( !movie.getDirector().equals(arg) ) {
-           it.remove();
-         }
-       }
-       return movies;
-     }
-    }
+   }
+   return movies;
+ }
+}
+{% endhighlight %}
 
 You may have used this technique in OO, without knowing that it is also a implement of dependency injection. 
 
@@ -147,15 +152,17 @@ Let's come back to Argo.
 
 The interface that HelloController implements is ArgoController, which is defined as:
 
-	/**
-	 * interface that a Controller class should implemented
-	 */
-	public interface ArgoController {
-	    /**
-	     * Called when instantiated by injector
-	     */  
-	    void init();
-	}
+{% highlight java %}
+/**
+ * interface that a Controller class should implemented
+ */
+public interface ArgoController {
+    /**
+     * Called when instantiated by injector
+     */  
+    void init();
+}
+{% endhighlight %}
 
 We can speculate that Argo use interface injection, and ArgoController is strongly related to Dependency Injection.
 
@@ -170,22 +177,26 @@ Another tool that could be used to run Hello-world web application is tomcat. In
 
 tomcat configuration is similar to jetty: (samples/hellow-world/pom.xml)
 
-	<plugin>  
-	    <groupId>org.apache.tomcat.maven</groupId>
-	    <artifactId>tomcat7-maven-plugin</artifactId>
-	    <version>2.0</version>
-	    <configuration>
-	        <path>/</path> <!--/argo -->
-	        <port>80</port>
-	    </configuration>
-	</plugin>
+{% highlight xml %}
+<plugin>  
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat7-maven-plugin</artifactId>
+    <version>2.0</version>
+    <configuration>
+        <path>/</path> <!--/argo -->
+        <port>80</port>
+    </configuration>
+</plugin>
+{% endhighlight %} 
 
 PS: It must clarified that only servlet 3.0 supports annotation based injection. So, if you used tomcat 6, you still needs to configure the web.xml:
 
-    <filter>
-      <filter-name>mvcfilter</filter-name>
-      <filter-class>com.bj58.argo.servlet.ArgoFilter</filter-class>
-    </filter>
+{% highlight xml %}
+<filter>
+  <filter-name>mvcfilter</filter-name>
+  <filter-class>com.bj58.argo.servlet.ArgoFilter</filter-class>
+</filter>
+{% endhighlight %}
 
 ### Conclusion ###
 
