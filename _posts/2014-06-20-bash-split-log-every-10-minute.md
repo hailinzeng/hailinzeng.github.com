@@ -2,7 +2,7 @@
 layout: post
 tagline: "Supporting tagline"
 tags : [bash]
-title : bash - split log every 10 minute
+title : Split Log Every 10 Minute
 ---
 {% include JB/setup %}
 

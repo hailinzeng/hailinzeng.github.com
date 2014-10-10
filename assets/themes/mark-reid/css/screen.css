@@ -547,3 +547,31 @@ img.maruku-png { }
 	color:#FFF;
 }
 
+
+.tagPanel{
+	margin:5px 0 -5px 0
+}
+.tagPanel a{
+	background-color:transparent;
+	border:none
+}
+.tagPanel a .tag{
+	background-color:lightcoral;
+	padding:3px 8px;
+	margin-right:5px;
+	margin-bottom:5px;
+	display:inline-block;
+	color:white;
+	border-radius:0.3em;
+	box-shadow:1px 1px 0 1px #ccc;
+	font-size:0.8em;
+	text-shadow:none;
+	-webkit-transition-duration:0.5s;
+	-moz-transition-duration:0.5s;
+	-ms-transition-duration:0.5s;
+	-o-transition-duration:0.5s;
+	transition-duration:0.5s
+}
+.tagPanel a .tag:hover{background-color:#db6968}
+.tag-posts{display:none}
+

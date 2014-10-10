@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Home
 ---
 {% include JB/setup %}
 
@@ -8,12 +7,12 @@ title: Home
 {% for post in paginator.posts %}
   <article class="content">
     <section class="title">
-      <h1 style="font-family: fantasy; margin-bottom: 0em; border-top:2px dashed #db6968; padding-top: 10px;"><a style="color:#db6968; text-shadow: 1px 1px #efefef,2px 2px #aee2d9" href="{{ post.url }}">{{ post.title }}</a></h1>
+      <h1 style="font-family: sans-serif; "><a style="color:#db6968; text-shadow: 1px 1px #efefef,2px 2px #aee2d9; " href="{{ post.url }}">{{ post.title }}</a></h1>
 
       {% if post.tags %}
-      <span class="tags">
+      <div class="tagPanel">
         {% for tag in post.tags %}
-        <a href="/tags.html#{{ tag }}" title="{{ tag }}" style="background-color: lightgray; "> <span>{{ tag }}</span></a>
+        <a href="/tags.html#{{ tag }}" title="{{ tag }}"> <div class="tag">{{ tag }}</div></a>
         {% endfor %}
       </span>
       {% endif %}
