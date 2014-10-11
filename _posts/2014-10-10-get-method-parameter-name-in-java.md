@@ -98,9 +98,6 @@ private String[] getMethodParamNames() {
 		
 		for (int i = 0; i < paramNames.length; i++)
 			paramNames[i] = attr.variableName(i + pos);
-		for (int i = 0; i < paramNames.length; i++) {
-			System.out.println(paramNames[i]);
-		}
 		
 		return paramNames;
 
@@ -128,19 +125,21 @@ This explains why it failed, as there is another local variable `e` which appear
 
 It seems the `LocalVariableTable` is not orderred by appearence, and I verrified the guessing by javadoc.
 
-`If LocalVariableTable attributes are present in the attributes table of a given Code attribute, then they may appear in any order.` (from [http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#1546](http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#1546) )
+`If LocalVariableTable attributes are present in the attributes table of a given Code attribute, then they may appear in any order.` 
+(from [http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#1546](http://docs.oracle.com/javase/specs/jvms/se5.0/html/ClassFile.doc.html#1546) )
 
 The `getMethodParamNames` implementation assumes the LocalVariableTable is orderred, which of course fails if the compiled `.class` is not orgnized in this way.
 
 And finally, i found the correct way the get a orderred local parameter names here [https://github.com/jboss-javassist/javassist/issues/14](https://github.com/jboss-javassist/javassist/issues/14)
 
-	chibash commented on Jul 25
-	I see. To get the k-th local variable, do this: 
-
 {% highlight java %}
+
+	// chibash commented on Jul 25
+	// I see. To get the k-th local variable, do this: 
+
 	for (int i = 0; i < parameterNames.length; i++)
 	parameterNames[attr.index(i)] = attr.variableName(i);
-{% endhighlight %}
 
-	The local variable table is not sorted by the local variable index.
+	// The local variable table is not sorted by the local variable index.
+{% endhighlight %}
 	
