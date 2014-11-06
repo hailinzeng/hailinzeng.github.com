@@ -575,3 +575,19 @@ img.maruku-png { }
 .tagPanel a .tag:hover{background-color:#db6968}
 .tag-posts{display:none}
 
+
+table.lines.highlight{
+    width: 780px;
+}
+
+/*
+td.line-data{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+*/
+
+/* temp hack*/
+td.line-numbers{
+	display:none;
+}
