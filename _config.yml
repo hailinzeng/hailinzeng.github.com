@@ -7,7 +7,7 @@ highlighter: rouge
 
 markdown: kramdown
 
-paginate: 1
+paginate: 10
 highlighter: pygments
 
 # Themes are encouraged to use these universal variables 

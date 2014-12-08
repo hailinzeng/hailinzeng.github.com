@@ -1,10 +1,21 @@
 <div id="page">
 	
-  <h1 class="emphnext">{{ page.title }}</h1>
-  <ul class="tag_box inline">
-  {% assign tags_list = page.tags %}
-  {% include JB/tags_list %}
-  </ul>
+  <h1 class="emphnext">
+    <a href="{{ page.title }}">{{ page.title }}</a>
+  </h1>
+      <ul class="blog-post-meta">
+        <li class="meta-item">
+          <span class="glyphicon glyphicon-calendar"></span>{{ page.date | date: "%B %e, %Y"}}
+        </li>
+        {% if page.tags %}
+          {% for tag in page.tags %}
+          <li class="meta-item">
+            <span class="glyphicon glyphicon-tag"></span>
+            <a href="/tags.html#{{ tag }} ">{{ tag }}</a>
+          </li>
+          {% endfor %}
+        {% endif %}
+      </ul>
 
   {{ content }}
 
