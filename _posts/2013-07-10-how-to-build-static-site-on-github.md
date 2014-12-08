@@ -32,7 +32,7 @@ During the installation, i have encounterred a few problems.
 
 In order to fix this problem, you have to install the follow dependency.
 
-    $ sudo apt-get install build-essential libopenssl-rubyruby1.8-dev
+    $ sudo apt-get install build-essential libopenssl-ruby ruby1.8-dev
 
  
 The answer is found on [http://ruby.about.com/od/faqs/qt/Extconf-Rb-1-In-Require-No-Such-File-To-Load-Mkmf-Loaderror.htm](http://ruby.about.com/od/faqs/qt/Extconf-Rb-1-In-Require-No-Such-File-To-Load-Mkmf-Loaderror.htm)
