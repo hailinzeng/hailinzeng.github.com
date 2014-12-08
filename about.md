@@ -7,7 +7,7 @@ group: navigation
 
 ### Work Experience
  
-July, 2012 - Present, [58.com](http://www.58.com)(Classifieds), SPAT([http://github.com/58code](http://github.com/58code)), R&D 
+July, 2012 - Nov, 2014 [58.com](http://www.58.com) Inc. (Classifieds), [SPAT](http://github.com/58code) (Infrastructure Services), Senior Software Engineer
 
 
 ### Chinese Blogs
@@ -19,7 +19,7 @@ July, 2012 - Present, [58.com](http://www.58.com)(Classifieds), SPAT([http://git
 ### Links
 
 <div class="tagPanel">
-	<a href="http://github.com/hailinzeng" title="github"> <div class="tag">github</div></a>
-	<a href="http://stackoverflow.com/users/732267/hailinzeng" title="stackoverflow"> <div class="tag">stackoverflow</div></a>
-	<a href="http://cn.linkedin.com/in/hailinzeng" title="linkedin"> <div class="tag">linkedin</div></a>
+	<a href="http://github.com/hailinzeng"> <img src="{{ site.url }}/assets/images/github40.png"> </a>
+	<a href="http://stackoverflow.com/users/732267/hailinzeng"> <img src="{{ site.url }}/assets/images/stackoverflow40.png"> </a>
+	<a href="http://cn.linkedin.com/in/hailinzeng"> <img src="{{ site.url }}/assets/images/linkedin40.png"> </a>
 </div>
