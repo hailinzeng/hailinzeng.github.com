@@ -111,7 +111,7 @@ private String[] getMethodParamNames() {
 
 I set a debug point in `getMethodParamNames`, and finally found it fails because the `parameNames` is not correctly evaluated.
 
-<img width="782px" alt="get-method-param-name-in-java-debug-stacktrace" src="{{ site.url }}/assets/images/get-method-param-name-in-java-debug-stacktrace.jpg">
+<img width="782px" alt="get-method-param-name-in-java-debug-stacktrace" src="http://ojijb0f8o.bkt.clouddn.com/get-method-param-name-in-java-debug-stacktrace.jpg">
 
 (left-up corner: the Action, right-up corner: `getMethodParamNames()` function)
 
@@ -119,7 +119,7 @@ The `paramNames` array here is `{"this"}`, which should be `{"id"}`. I watches s
 
 I did some search on google, and found a tool [jclasslib](https://github.com/ingokegel/jclasslib) to browse LocalVariableAttribute of a `.class` file.
 
-<img width="782px" alt="get-method-param-name-in-java-localvariabletable" src="{{ site.url }}/assets/images/get-method-param-name-in-java-localvariabletable.jpg">
+<img width="782px" alt="get-method-param-name-in-java-localvariabletable" src="http://ojijb0f8o.bkt.clouddn.com/get-method-param-name-in-java-localvariabletable.jpg">
 
 This explains why it failed, as there is another local variable `e` which appear before every other local variables.
 
