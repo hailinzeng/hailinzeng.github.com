@@ -203,7 +203,8 @@ ul.compact li a {
 	position: relative;
 /*	font-variant: small-caps; */
 	line-height: 1em;
-	margin-top: .5em;
+	margin-top: 2em;
+        height: 60px;
 	margin-bottom: 0;
 }
 #header h1 {
