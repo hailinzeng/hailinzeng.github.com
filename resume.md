@@ -7,13 +7,13 @@ group: navigation
 
 ### Hailin Zeng ###
 - Software Engineer @ ATEC. Beijing, China. (Remote working)
-- mail:[]()
+- mail: <img src="{{ site.url }}/email.png">
 - tel:[]()
 - blog:[hailinzeng.github.io](http://hailinzeng.github.io)
 - wooyun:[]()
 
 ### Self Assessment ###
-- Skills: Skilled in C/C++, Java, Shell, Familar with Flex & Bison. Understand Python.
+- Skills: Skilled in C/C++, Java, Shell, Familiar with Flex & Bison. Understand Python.
 - Personality: Curious in the essence behind. Open mind in learning new things. ISTJ personality.
 
 ### Work Experience ###
@@ -30,35 +30,35 @@ group: navigation
 #### *Formal Equivalence Checking* ####
 - Duration: Jul, 2009 – Apr, 2011 (during undergraduate years), Dec, 2014 – Present (fulltime)
 - Description: Formal Equivalence Checking [(wikipedia)](http://en.wikipedia.org/wiki/Formal_equivalence_checking) for Integrated Circuit. Customers are chip vendors (eg, MTK, huawei, ZTE).
-- Responsibility: 
+- Responsibility:
 * 1) Write lexical/syntax analyzer by Flex&Basion, able to handle SUN’s PicoJava II.
-* 2) Transformation into SSA form, doing simple simplification and optimazation, extract transiton function.
+* 2) Transformation into SSA form, doing simple simplification and optimization, extract transition function.
 * 3) Symbolic Unroll the transition function, create constraints and assertions.
 * 4) Check constraints/assertions validity by constraint solver [STP](https://github.com/stp/stp).
 
 #### *Distributed Lock Manager* ####
 - Duration: Arg, 2012 – Feb, 2013
 - Description: Distributed lock manager based on the Paxos consensus algorithm implement by C++.
-- Responsibility: 
+- Responsibility:
 * 1) Fully in charge, except Leader election algorithm, util class (log, hash, and thread pool), and java client.
 * 2) The server use epoll + thread pool model for handing request. Client use epoll for async communication, and consistent hashing for load-balancing.
-* 3) Designed the Distributed Lock by starting a commit proposal with a uniq session id, queued in leader server, grant if previous lock request released or expired(heartbeat lost). Both Require and Release are keeping consensus agreement between servers by Paxos.
+* 3) Designed the Distributed Lock by starting a commit proposal with a unique session id, queued in leader server, grant if previous lock request released or expired(heartbeat lost). Both Require and Release are keeping consensus agreement between servers by Paxos.
 
 #### *Unified Supervising Platform* ####
 - Duration: Mar, 2013 – Oct, 2014
-- Description: Part of USP project ([velocity talks](http://velocity.oreilly.com.cn/2013/index.php?func=session&id=16)), Monitoring machine info, service running status, and business logs across serveral hundred online machines.
-- Responsibility: 
+- Description: Part of USP project ([velocity talks](http://velocity.oreilly.com.cn/2013/index.php?func=session&id=16)), Monitoring machine info, service running status, and business logs across several hundred online machines.
+- Responsibility:
 * 1) Implement DAT pattern matching algorithm for checking webpage containing a certain keyword.
 * 2) Implement Nginx module and Lua script to collect http logs. (latter switched to kernel modules to collect from Switcher)
 * 3) Implement Storm topologies for top N http error URLs, http 404 count in last 5 min.
 * 4) Implement Hadoop Jobs analyzing http logs, timeout logs in Web Framework, generating daily reports.
-* 5) Implement contacts info, monitor configuration pages, from front-end javascript to back-end database. 
+* 5) Implement contacts info, monitor configuration pages, from front-end javaScript to back-end database.
 * 6) Implement simple distributed tracing system according to the idea of Google dapper.
 
 #### *InfoQ Raven* ####
-- Duration: Mar, 2015 - Present (parttime)
+- Duration: Mar, 2015 - Present (part-time)
 - Description: Simple CMS for editors in InfoQ
-- Responsibility: 
+- Responsibility:
 * 1) Fix bugs in old system, written by python flask framework, deployed on SAE.
 * 2) Refactoring by Spring + MySql + Bootstrap + jQuery.
 
@@ -75,4 +75,4 @@ group: navigation
 #### *Bastion Host Audit* ####
 - Duration: Dec, 2013 – Jan, 2014
 - Description: Capturing and logging user operations on bastion host for audit.
-- Responsibility: Capture the input/output of linux Script command, save it to MySQL.
+- Responsibility: Capture the input/output of Linux Script command, save it to MySQL.
