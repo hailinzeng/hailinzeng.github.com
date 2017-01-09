@@ -13,7 +13,7 @@ group: navigation
 
 ### Self Assessment ###
 - Skills: Skilled in C/C++, Java, Shell, Familiar with Flex & Bison. Understand Python.
-- Personality: Curious in the essence behind. Open mind in learning new things. ISTJ personality.
+- Personality: Curious in the essence behind. Open-minded in learning new things. ISTJ personality.
 
 ### Work Experience ###
 - `Dec, 2014 - Present`, ATEC Technologies Inc. San Francisco Bay Area, R&D
