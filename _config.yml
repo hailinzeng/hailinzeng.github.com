@@ -1,5 +1,5 @@
 # Gems
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-admin]
 
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
@@ -10,7 +10,7 @@ highlighter: rouge
 
 markdown: kramdown
 
-paginate: 10
+#paginate: 10
 highlighter: pygments
 
 # Themes are encouraged to use these universal variables 
