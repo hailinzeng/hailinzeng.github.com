@@ -10,7 +10,6 @@ group: navigation
 - mail: <img src="{{ site.url }}/email.png">
 - tel:[]()
 - blog:[hailinzeng.github.io](http://hailinzeng.github.io)
-- wooyun:[]()
 
 ### Self Assessment ###
 - Skills: Skilled in C/C++, Java, Shell, Familiar with Flex & Bison. Understand Python.
@@ -34,7 +33,7 @@ group: navigation
 * 1) Write lexical/syntax analyzer by Flex&Basion, able to handle SUN’s PicoJava II.
 * 2) Transformation into SSA form, doing simple simplification and optimization, extract transition function.
 * 3) Symbolic Unroll the transition function, create constraints and assertions.
-* 4) Check constraints/assertions validity by constraint solver [STP](https://github.com/stp/stp).
+* 4) Check constraints/assertions validity by constraint solver.
 
 #### *Distributed Lock Manager* ####
 - Duration: Arg, 2012 – Feb, 2013
