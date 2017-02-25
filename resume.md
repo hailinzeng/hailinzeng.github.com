@@ -55,11 +55,11 @@ group: navigation
 * 6) Implement simple distributed tracing system according to the idea of Google dapper.
 
 #### *InfoQ Raven* ####
-- Duration: Mar, 2015 - Present (part-time)
+- Duration: Mar, 2015 - Aug, 2015 (part-time)
 - Description: Simple CMS for editors in InfoQ
 - Responsibility:
 * 1) Fix bugs in old system, written by python flask framework, deployed on SAE.
-* 2) Refactoring by Spring + MySql + Bootstrap + jQuery.
+* 2) Refactoring by Spring + MySql + Bootstrap + jQuery. Finish the draft version, and then hand it over.
 
 #### *DSAP Integration* #####
 - Duration: Oct, 2015 - Nov, 2015
