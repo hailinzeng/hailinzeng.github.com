@@ -28,7 +28,7 @@ group: navigation
 
 #### *Formal Equivalence Checking* ####
 - Duration: Jul, 2009 – Apr, 2011 (during undergraduate years), Dec, 2014 – Present (fulltime)
-- Description: Formal Equivalence Checking [(wikipedia)](http://en.wikipedia.org/wiki/Formal_equivalence_checking) for Integrated Circuit. Customers are chip vendors (eg, MTK, huawei, ZTE).
+- Description: Formal Equivalence Checking [(wikipedia)](http://en.wikipedia.org/wiki/Formal_equivalence_checking) for Integrated Circuit. Customers are chip vendors (eg, MTK, VeriSilicon, Loongson).
 - Responsibility:
 * 1) Write lexical/syntax analyzer by Flex&Basion, able to handle SUN’s PicoJava II.
 * 2) Transformation into SSA form, doing simple simplification and optimization, extract transition function.
