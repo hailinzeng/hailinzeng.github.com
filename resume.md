@@ -28,7 +28,7 @@ group: navigation
 
 #### *Formal Equivalence Checking* ####
 - Duration: Jul, 2009 – Apr, 2011 (during undergraduate years), Dec, 2014 – Present (fulltime)
-- Description: Formal Equivalence Checking [(wikipedia)](http://en.wikipedia.org/wiki/Formal_equivalence_checking) for Integrated Circuit. Customers are chip vendors (eg, MTK, VeriSilicon, Loongson).
+- Description: [Formal Equivalence Checking](http://en.wikipedia.org/wiki/Formal_equivalence_checking) for Integrated Circuit. Customers are chip vendors (eg, MTK, VeriSilicon, Loongson).
 - Responsibility:
 * 1) Write lexical/syntax analyzer by Flex&Basion, able to handle SUN’s PicoJava II.
 * 2) Transformation into SSA form, doing simple simplification and optimization, extract transition function.
@@ -45,7 +45,7 @@ group: navigation
 
 #### *Unified Supervising Platform* ####
 - Duration: Mar, 2013 – Oct, 2014
-- Description: Part of USP project ([velocity talks](http://velocity.oreilly.com.cn/2013/index.php?func=session&id=16)), Monitoring machine info, service running status, and business logs across several hundred online machines.
+- Description: Part of [USP](http://velocity.oreilly.com.cn/2013/index.php?func=session&id=16) project, Monitoring machine info, service running status, and business logs across several hundred online machines.
 - Responsibility:
 * 1) Implement DAT pattern matching algorithm for checking webpage containing a certain keyword.
 * 2) Implement Nginx module and Lua script to collect http logs. (later switched to kernel modules to collect from Switcher)
