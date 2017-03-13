@@ -40,7 +40,7 @@ group: navigation
 - Description: Distributed lock manager based on the Paxos consensus algorithm implement by C++.
 - Responsibility:
 * 1) Fully in charge, except Leader election algorithm, util class (log, hash, and thread pool), and java client.
-* 2) The server use epoll + thread pool model for handing request. Client use epoll for async communication, and consistent hashing for load-balancing.
+* 2) The server use epoll + thread pool model for handling request. Client use epoll for async communication, and consistent hashing for load-balancing.
 * 3) Designed the Distributed Lock by starting a commit proposal with a unique session id, queued in leader server, grant if previous lock request released or expired(heartbeat lost). Both Require and Release are keeping consensus agreement between servers by Paxos.
 
 #### *Unified Supervising Platform* ####
@@ -48,7 +48,7 @@ group: navigation
 - Description: Part of USP project ([velocity talks](http://velocity.oreilly.com.cn/2013/index.php?func=session&id=16)), Monitoring machine info, service running status, and business logs across several hundred online machines.
 - Responsibility:
 * 1) Implement DAT pattern matching algorithm for checking webpage containing a certain keyword.
-* 2) Implement Nginx module and Lua script to collect http logs. (latter switched to kernel modules to collect from Switcher)
+* 2) Implement Nginx module and Lua script to collect http logs. (later switched to kernel modules to collect from Switcher)
 * 3) Implement Storm topologies for top N http error URLs, http 404 count in last 5 min.
 * 4) Implement Hadoop Jobs analyzing http logs, timeout logs in Web Framework, generating daily reports.
 * 5) Implement contacts info, monitor configuration pages, from front-end javaScript to back-end database.
@@ -58,7 +58,7 @@ group: navigation
 - Duration: Mar, 2015 - Aug, 2015 (part-time)
 - Description: Simple CMS for editors in InfoQ
 - Responsibility:
-* 1) Fix bugs in old system, written by python flask framework, deployed on SAE.
+* 1) Fix bugs in the old system, written by python flask framework, deployed on SAE.
 * 2) Refactoring by Spring + MySql + Bootstrap + jQuery. Finish the draft version, and then hand it over.
 
 #### *DSAP Integration* #####
