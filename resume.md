@@ -20,7 +20,7 @@ group: navigation
 - Duration: Jul, 2009 – Apr, 2011 (Intern) ; Dec, 2014 – Present (Full-Time)
 - Description: [Formal Equivalence Checking](http://en.wikipedia.org/wiki/Formal_equivalence_checking) for Integrated Circuit. Customers are chip vendors (eg, MTK, VeriSilicon, Loongson).
 - Responsibility:
-* 1) Write lexical/syntax analyzer by Flex&Basion, able to handle SUN’s PicoJava II.
+* 1) Write lexical/syntax analyzer by Flex&Bison, able to handle SUN’s PicoJava II.
 * 2) Transformation into SSA form, doing simple simplification and optimization, extract transition function.
 * 3) Symbolic Unroll the transition function, create constraints and assertions.
 * 4) Check constraints/assertions validity by constraint solver.
@@ -77,7 +77,7 @@ group: navigation
 
 ### Education ###
 - `Sep, 2009 – Jan, 2012`, Master's Degree, Computer Science and Theory, Jilin University, Second Best
-- `Sep, 2005 – Jan, 2009`, Bacheler's Degree, Computer Science and Technology, Jilin University, Top 30%
+- `Sep, 2005 – Jan, 2009`, Bachelor's Degree, Computer Science and Technology, Jilin University, Top 30%
 
 ### Additional ###
 - Skills: `C++`, `Lex&Yacc`, `LLVM`, `Compiler`, `Shell`, `Linux`, `Java`, `MyBatis`, `Python`, `Flask`, `MySQL`, `jQuery`, `BootStrap`
