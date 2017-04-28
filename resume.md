@@ -9,12 +9,12 @@ group: navigation
 - Software Engineer @ ATEC. Beijing, China. (Remote working)
 - Email: <img src="{{ site.url }}/email.png">
 - Phone:[]()
-- Blog:[hailinzeng.github.io](http://hailinzeng.github.io)
+- Blog:[blog.hailinzeng.com](http://blog.hailinzeng.com)
 
 ### Skill ###
 - 5 years Tech experience, fluent English
 - C/C++ Engineer (5 years) , Java Engineer (3 years)
-- `C++`, `Lex&Yacc`, `LLVM`, `Compiler`, `Shell`, `Linux`, `Java`, `Spring`, `MyBatis`, `Python`, `Flask`, `MySQL`, `jQuery`, `BootStrap`
+- `C++`, `Lex&Yacc`, `LLVM`, `Compiler`, `Shell`, `Linux`, `Java`, `Spring`, `MyBatis`, `Python`, `Flask`, `MySQL`, `jQuery`, `BootStrap`, `Docker`
 
 ### Work Experience ###
 - `Dec, 2014 - Present`, ATEC Technologies Inc. San Francisco Bay Area, R&D
@@ -24,7 +24,8 @@ group: navigation
 - `Feb, 2017 - Present`
 - Formal Verification Tool to generate test case of interest.
 - Responsibility:
-* 1) Write LLVM optimization pass, tested with llvm test-suite.
+* 1) Write LLVM optimization pass to fold CFG. Correctness verified by llvm test-suite regression.
+* 2) Ship applications in containers with Docker.
 
 #### *ATEC: A Tool for Equivalence Checking* ####
 - `Jul, 2009 – Apr, 2011` (Intern), `Dec, 2014 – Present`
@@ -32,7 +33,7 @@ group: navigation
 - Responsibility:
 * 1) Write lexical/syntax analyzer by Flex&Bison, able to handle SUN’s PicoJava II.
 * 2) Translate into SSA form, doing simple optimization, extract transition function.
-* 3) Symbolic Unroll the transition function, create constraints and assertions.
+* 3) Symbolic unroll the transition function, create constraints and assertions.
 * 4) Check assertions validity by constraint solver.
 
 #### *Talos: Distributed Storage* ####
@@ -59,8 +60,8 @@ group: navigation
 - `Mar, 2015 - Aug, 2015` (Part-Time)
 - Simple CMS for editors in InfoQ China
 - Responsibility:
-* 1) Fix bugs in the old system, written by python flask framework, deployed on Sina App Engine.
-* 2) Refactoring by Spring + MyBatis + MySql + Bootstrap + jQuery. Finish the draft version, and then hand it over.
+* 1) Fix bugs in the flask project deployed on Sina App Engine.
+* 2) Refactor by Spring + MyBatis + MySql + Bootstrap + jQuery. Finished a draft version.
 
 #### *DSAP: Data Platform Integration* #####
 - `Oct, 2014 - Nov, 2014`
