@@ -14,7 +14,7 @@ group: navigation
 ### Skill ###
 - 5 years Tech experience, fluent English
 - C/C++ Engineer (5 years) , Java Engineer (3 years)
-- `C++`, `Lex&Yacc`, `LLVM`, `Compiler`, `Shell`, `Linux`, `Java`, `Spring`, `MyBatis`, `Python`, `Flask`, `MySQL`, `jQuery`, `BootStrap`, `Docker`
+- `C++`, `Lex&Yacc`, `LLVM`, `Compiler`, `Java`, `Spring`, `MyBatis`, `Python`, `Flask`, `MySQL`, `HTML`, `CSS`, `jQuery`, `JavaScript`, `BootStrap`, `Docker`, `Shell`, `Linux`, `vi`, `git`
 
 ### Work Experience ###
 - `Dec, 2014 - Present`, ATEC Technologies Inc. San Francisco Bay Area, R&D
@@ -55,13 +55,6 @@ group: navigation
 * 1) Use epoll + thread pool model for handling request in the server side.
 * 2) Use epoll for async communication, and consistent hashing for load-balancing in the client side.
 * 3) Design protocol to implement distributed lock with Paxos.
-
-#### *Raven: CMS for InfoQ China editor* ####
-- `Mar, 2015 - Aug, 2015` (Part-Time)
-- Simple CMS for editors in InfoQ China
-- Responsibility:
-* 1) Fix bugs in the flask project deployed on Sina App Engine.
-* 2) Refactor by Spring + MyBatis + MySql + Bootstrap + jQuery. Finished a draft version.
 
 #### *DSAP: Data Platform Integration* #####
 - `Oct, 2014 - Nov, 2014`
