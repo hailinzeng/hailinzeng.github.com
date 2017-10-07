@@ -6,21 +6,25 @@ group: navigation
 {% include JB/setup %}
 
 ### Hailin Zeng ###
+
 - Software Engineer @ ATEC. Beijing, China. (Remote working)
 - Email: <img src="{{ site.url }}/email.png">
 - Phone:[]()
 - Blog:[blog.hailinzeng.com](http://blog.hailinzeng.com)
 
 ### Skill ###
+
 - 5 years Tech experience, fluent English
 - C/C++ Engineer (5 years) , Java Engineer (3 years)
-- `C++`, `Lex&Yacc`, `LLVM`, `Compiler`, `Java`, `Spring`, `MyBatis`, `Python`, `Flask`, `MySQL`, `HTML`, `CSS`, `jQuery`, `JavaScript`, `BootStrap`, `Docker`, `Shell`, `Linux`, `vi`, `git`
+- `C++`, `Lex&Yacc`, `LLVM`, `Compiler`, `Java`, `Spring`, `MyBatis`, `Python`, `Flask`, `Scrapy`, `MySQL`, `MongoDB`, `HTML`, `CSS`, `jQuery`, `JavaScript`, `BootStrap`, `Docker`, `Shell`, `Linux`, `vi`, `git`
 
 ### Work Experience ###
+
 - `Dec, 2014 - Present`, ATEC Technologies Inc. San Francisco Bay Area, R&D
 - `Jul, 2012 - Dec, 2014`, 58.com Inc. Beijing, Service Platform Architecture Team, R&D
 
 #### *Miner: C++ test case generation* ####
+
 - `Feb, 2017 - Present`
 - Formal Verification Tool to generate test case of interest.
 - Responsibility:
@@ -28,6 +32,7 @@ group: navigation
 * 2) Ship applications in containers with Docker.
 
 #### *ATEC: A Tool for Equivalence Checking* ####
+
 - `Jul, 2009 – Apr, 2011` (Intern), `Dec, 2014 – Present`
 - Formal Verification Tool to hunt bugs in Integrate Circuit Design.
 - Responsibility:
@@ -43,12 +48,14 @@ group: navigation
 * 1) Implement the Binary Log functionality to sync post/delete operation between master/slave.
 
 #### *Bastion: Record SSH Sessions for Security Audit* ####
+
 - `Dec, 2013 – Jan, 2014`
 - Uniq entrance to login online machines. User operations are saved for audit.
 - Responsibility:
 * 1) Capture the input/output of Linux Script command, save it to MySQL.
 
 #### *DLM: Distributed Lock Manager* ####
+
 - `Aug, 2012 – Feb, 2013`
 - Distributed Lock Manager based on the Paxos consensus algorithm.
 - Responsibility:
@@ -57,12 +64,14 @@ group: navigation
 * 3) Design protocol to implement distributed lock with Paxos.
 
 #### *DSAP: Data Platform Integration* #####
+
 - `Oct, 2014 - Nov, 2014`
 - Apache Hadoop Ecosystem, Data Platform in 58.com Inc.
 - Responsibility:
 * 1) Integrate Storm and Oozie in DSAP.
 
 #### *USP: Unified Supervising Platform* ####
+
 - `Mar, 2013 – Oct, 2014`
 - Unified platform to monitor server machines and running services.
 - Responsibility:
@@ -74,10 +83,12 @@ group: navigation
 * 6) Integrate distributed tracing system for services statics.
 
 ### Education Background ###
+
 - `Sep, 2009 – Jan, 2012`, Master's Degree, Computer Science and Theory, Jilin University, Second Best
 - `Sep, 2005 – Jan, 2009`, Bachelor's Degree, Computer Science and Technology, Jilin University, Top 30%
 
 ### Executive Summary ###
+
 - Personality: Curious in the essence behind. Open-minded in learning new things. ISTJ personality.
 
 <!-- ### Portfolios ### -->
