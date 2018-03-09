@@ -9,7 +9,7 @@ tags : [jekyll, github]
 
 
 The back-end engine of the feature ***Github Pages*** is jekyll. If your github project contains the right jekyll configuration, it can be recognized by Github. Thus you can build a blog website on Github for free.
- 
+
 
 ruby has a install management tool named gem, in ubuntu you can install gem by executing
 
@@ -20,8 +20,8 @@ After that, install jekyll by gem
 
     sudo gem install Jekyll
 
- 
-During the installation, i have encounterred a few problems.
+
+During the installation, i have encountered a few problems.
 
 **Problem 1**
 
@@ -34,10 +34,10 @@ In order to fix this problem, you have to install the follow dependency.
 
     $ sudo apt-get install build-essential libopenssl-ruby ruby1.8-dev
 
- 
+
 The answer is found on [http://ruby.about.com/od/faqs/qt/Extconf-Rb-1-In-Require-No-Such-File-To-Load-Mkmf-Loaderror.htm](http://ruby.about.com/od/faqs/qt/Extconf-Rb-1-In-Require-No-Such-File-To-Load-Mkmf-Loaderror.htm)
 
- 
+
 **Problem 2**
 
     hailin@hailin-VirtualBox:~/win7/MyProjects $sudo gem install jekyll
@@ -53,13 +53,13 @@ The answer is found on [http://ruby.about.com/od/faqs/qt/Extconf-Rb-1-In-Require
 
     Installing RDoc documentation forjekyll-1.0.3...
 
- 
+
 It seems jekyll installed successfully, but ri documentation failed.
 
 In [http://stackoverflow.com/questions/1381725/how-to-make-no-ri-no-rdoc-the-default-for-gem-install](http://stackoverflow.com/questions/1381725/how-to-make-no-ri-no-rdoc-the-default-for-gem-install), it said you can skip installing the document by creating a file  named **~/.gemrc**, with the content is:
 
     gem: --no-ri --no-rdoc
- 
+
 
 
 
@@ -76,7 +76,7 @@ And then i tried again, another problem happened.
     ERROR: While executing gem ... (NoMethodError)
     undefinedmethod `map' for Gem::Specification:Class
 
- 
+
 It seems the definition for method 'map' cannot be found.
 
 As jekyll is installed with sudo, the file is installed in the directory **/var/lib/gems/1.8**, but this directory is not on the PATH env by default.
@@ -88,12 +88,12 @@ So, i add this directory to the env PATH. (add the following line in /etc/profil
 
     export PATH=$PATH:/var/lib/gems/1.8/bin #Add RVM to PATH for scripting
 
- 
-At last, the jekyll works! 
+
+At last, the jekyll works!
 
 **Create a blog**
 
-creat a site by **Jekyll new myblog**. It will generate default files/folders，mainly includes
+create a site by **Jekyll new myblog**. It will generate default files/folders，mainly includes
 
     _config.yml : jekyll main configuration
     _layouts : layout template

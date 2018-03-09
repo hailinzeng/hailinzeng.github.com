@@ -2,7 +2,7 @@
 layout: post
 tagline: "Supporting tagline"
 tags : [Argo, github, opensource]
-title : Argo part 3 - Google Guice Dependency Injection Framerwork
+title : Argo part 3 - Google Guice Dependency Injection Framework
 ---
 {% include JB/setup %}
 
@@ -16,7 +16,7 @@ The main components of Google-guice dependency injection framework are @Inject a
 
 Let's see an example on google code
 
-The RealBillingService class relies on interface CreditCardProcessor and TransactionLog in constructor. 
+The RealBillingService class relies on interface CreditCardProcessor and TransactionLog in constructor.
 
 {% highlight java %}
 class RealBillingService implements BillingService {
@@ -38,12 +38,12 @@ class RealBillingService implements BillingService {
 {% endhighlight %}
 
 Notice that there is a @Inject annotation on the constructor. So something will be happen in Guice when the constructor of RealBillingService is called.
- 
+
 AbstractModule builds the object-graph of Guice, which binds the interface with the implementation by overriding the function Configure.
 
 {% highlight java %}
 public class BillingModule extends AbstractModule {
-  @Override 
+  @Override
   protected void configure() {
 
      /*
@@ -92,30 +92,30 @@ Let's check the usage in Argo .
 //Argo.java
 
 public class Argo {  
-  
+
     public ArgoDispatcher init(ServletContext servletContext,  
                                GroupConvention groupConvention) {  
         …  
-  
+
         List<Module> modules = Lists.newArrayList();  
         modules.add(new ArgoModule(this));  
-  
+
         Module groupModule = groupConvention.group().module();  
         if (null != groupModule)  
             modules.add(groupModule);  
-  
+
         Module projectModule = groupConvention.currentProject().module();  
         if (null != projectModule)  
             modules.add(projectModule);  
-  
+
         servletContext.log("preparing an injector");  
         this.injector = buildInjector(modules);  
         servletContext.log("injector completed");  
-  
+
         …  
     }  
-  
-  
+
+
     private Injector buildInjector(List<Module> modules) {  
         return Guice.createInjector(modules);  
     }  
@@ -125,35 +125,35 @@ public class Argo {
 //ArgoModule
 
 public class ArgoModule extends AbstractModule {  
-  
+
     @Override  
     protected void configure() {  
-  
+
         bind(ServletRequest.class).to(HttpServletRequest.class);  
         bind(ServletResponse.class).to(HttpServletResponse.class);  
-  
+
         bind(BeatContext.class)  
                 .annotatedWith(ArgoSystem.class)  
                 .to(DefaultBeatContext.class);  
-  
+
         bind(ActionResult.class)  
                 .annotatedWith(Names.named("HTTP_STATUS=404"))  
                 .toInstance(StatusCodeActionResult.defaultSc404);  
-  
+
         bind(ActionResult.class)  
                 .annotatedWith(Names.named("HTTP_STATUS=405"))  
                 .toInstance(StatusCodeActionResult.defaultSc405);  
-  
+
         bind(Action.class).annotatedWith(StaticActionAnnotation.class)  
                 .to(StaticFilesAction.class);  
-  
+
         bind(ClientContext.class).to(DefaultClientContext.class);  
         bind(Model.class).to(DefaultModel.class);  
-  
+
         bind(MultipartConfigElement.class)  
                 .toProvider(DefaultMultipartConfigElementProvider.class)  
                 .in(Singleton.class);  
-  
+
         // bind all controllers.  
         for (Class<? extends ArgoController> clazz : argo.getControllerClasses())  
             bind(clazz).in(Singleton.class);  
@@ -162,6 +162,6 @@ public class ArgoModule extends AbstractModule {
 {% endhighlight %}
 
 As you can see, in Argo.init(), a set of Module instance is created, and then the Guice.CreateInjector() function is called to bind the interface and implements.
- 
+
 
 From the name of argo.getControllerClasses(), we could inspect that these Module are the collection of Controllers Annotated by Argo.

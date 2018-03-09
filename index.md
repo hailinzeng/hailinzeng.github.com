@@ -1,12 +1,12 @@
 ---
-layout: page 
+layout: page
 title: hailinzeng (Hailin, Zeng)
 ---
 {% include JB/setup %}
 
 ### Welcome
 
-I'm Hailin Zeng, a Software Engineer. I am working in a startup company [ATEC](http://tukarla.com/).
+I'm Hailin Zeng, a Software Engineer. I am working for a startup company [ATEC](http://tukarla.com/).
 
 
 ### Links

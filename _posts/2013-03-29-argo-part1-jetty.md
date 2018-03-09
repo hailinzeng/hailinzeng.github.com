@@ -7,7 +7,7 @@ excerpt: "Argo(https://github.com/58code/Argo) is a lightweight web framework op
 ---
 {% include JB/setup %}
 
-Argo([https://github.com/58code/Argo](https://github.com/58code/Argo "https://github.com/58code/Argo")) is a lightweight web framework opensouced by 58.com(the craigslist in china). 
+Argo([https://github.com/58code/Argo](https://github.com/58code/Argo "https://github.com/58code/Argo")) is a lightweight web framework open-sourced by 58.com(the craigslist in china).
 
 ### Background ###
 
@@ -37,7 +37,7 @@ At first, I thought it may existing some configurations of jetty that would rela
     <!-- http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin -->  
     <groupId>org.mortbay.jetty</groupId>  
     <artifactId>jetty-maven-plugin</artifactId>  
-  
+
     <configuration>  
         <stopPort>9966</stopPort>  
         <stopKey>foo</stopKey>  
@@ -83,7 +83,7 @@ The Connector receives Http connections. The Handle handles request from the Con
 - Using Jetty WebApp and Context Deployers.
 
 
-No Main function to call jetty in code, no XML configuration files. Not configured in webapp. 
+No Main function to call jetty in code, no XML configuration files. Not configured in webapp.
 
 So, I'm in certain that Argo used the dependency injection technique. That is, Argo use **dependency injection** to configure jetty.
 
@@ -93,7 +93,7 @@ So, I'm in certain that Argo used the dependency injection technique. That is, A
 
 [http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html)
 
-[http://helloj2ee.googlecode.com/files/DependencyInjection.pdf](http://helloj2ee.googlecode.com/files/DependencyInjection.pdf) //strongly recommended 
+[http://helloj2ee.googlecode.com/files/DependencyInjection.pdf](http://helloj2ee.googlecode.com/files/DependencyInjection.pdf) //strongly recommended
 
 An example in DependencyInjection.pdf:
 
@@ -138,7 +138,7 @@ public class MovieLister {
 }
 {% endhighlight %}
 
-You may have used this technique in OO, without knowing that it is also a implement of dependency injection. 
+You may have used this technique in OO, without knowing that it is also a implement of dependency injection.
 
 The dependency injection can be implemented by:
 
@@ -187,7 +187,7 @@ tomcat configuration is similar to jetty: (samples/hellow-world/pom.xml)
         <port>80</port>
     </configuration>
 </plugin>
-{% endhighlight %} 
+{% endhighlight %}
 
 PS: It must clarified that only servlet 3.0 supports annotation based injection. So, if you used tomcat 6, you still needs to configure the web.xml:
 

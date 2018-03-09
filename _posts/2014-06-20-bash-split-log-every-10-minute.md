@@ -6,7 +6,7 @@ title : Split Log Every 10 Minute
 ---
 {% include JB/setup %}
 
-We have a system which logs all http request, including timestamp, client ip, server ip, http status and url. 
+We have a system which logs all http request, including timestamp, client ip, server ip, http status and url.
 
 We have three machine collecting these logs, and deployed a job on storm to merge them all and do completely analysis.
 
@@ -14,12 +14,12 @@ We have three machine collecting these logs, and deployed a job on storm to merg
     machine B logs -> flume -> kafaka -> storm
     machine C logs /
 
-As storm is rarely used in our company, they had not provide a user friendly web interface to submit the storm job. So, i write a script do a simple analyse.
+As storm is rarely used in our company, they had not provide a user friendly web interface to submit the storm job. So, i write a script do a simple analyze.
 
 The log file are rotate every hour, and size 1G ~ 2G.
 
 	$ls -l -h
-	-rw-rw-r--+ 1 root root 1006M Jun 20 10:30 
+	-rw-rw-r--+ 1 root root 1006M Jun 20 10:30
 	-rw-rw-r--+ 1 root root 1.4G Jun 20 08:59 monitor.log.20140620-08
 	-rw-rw-r--+ 1 root root 1.9G Jun 20 09:59 monitor.log.20140620-09
 

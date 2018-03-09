@@ -22,17 +22,17 @@ An example from the guide: A filer to display request params in url.
 {% highlight java %}
 public class MyFilter implements Filter {  
     FilterConfig filterConfig = null;  
-  
+
     public void init(FilterConfig filterConfig) throws ServletException {  
         this.filterConfig = filterConfig;  
     }  
 
     …  
-  
+
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)  
             throws IOException, ServletException {  
         servletResponse.setContentType("text/html");  
-          
+
         PrintWriter out = servletResponse.getWriter();  
         out.println("my-param (InitParameter): " + filterConfig.getInitParameter("my-param"));  
         out.println("<br/><br/>Parameters:<br/>");  
@@ -46,12 +46,12 @@ public class MyFilter implements Filter {
         } else {  
             out.println("---None---<br/>");  
         }  
-  
+
         out.println("<br/>Start Regular Content:<br/><hr/>");  
         filterChain.doFilter(servletRequest, servletResponse);  
         out.println("<br/><hr/>End Regular Content:<br/>");  
     }  
-  
+
 }  
 {% endhighlight %}
 
@@ -64,7 +64,7 @@ A Filter can be configured
 - in web.xml
 - by @WebFilter annotation
 
-For example, you can configure Argo in web.xml 
+For example, you can configure Argo in web.xml
 
 {% highlight xml %}
 <filter>
@@ -76,13 +76,13 @@ For example, you can configure Argo in web.xml
 ### @WebFilter ###
 
 
-*@WebFilter* exampes
+*@WebFilter* examples
 
 [http://www.codejava.net/java-ee/servlet/webfilter-annotation-examples](http://www.codejava.net/java-ee/servlet/webfilter-annotation-examples)
 
 {% highlight java %}
 @WebFilter(  
-    urlPatterns = {"/*"}, 
+    urlPatterns = {"/*"},
     attribute2=value2,  
     ...  
 )  
@@ -97,7 +97,7 @@ The urlPatterns is a must attribute in @WebFilter. And the class annotated by @W
 ### Filter in Argo ###
 
 {% highlight java %}
-/** 
+/**
 * Schedule by a Filter
 */  
 @WebFilter(urlPatterns = {"/*"},  
@@ -106,11 +106,11 @@ The urlPatterns is a must attribute in @WebFilter. And the class annotated by @W
 )  
 public class ArgoFilter implements Filter {  
     private ArgoDispatcher dispatcher;  
-  
+
     @Override  
     public void init(FilterConfig filterConfig) throws ServletException {  
         ServletContext servletContext = filterConfig.getServletContext();  
-  
+
         try {  
             dispatcher = ArgoDispatcherFactory.create(servletContext);  
             dispatcher.init();  
@@ -119,15 +119,15 @@ public class ArgoFilter implements Filter {
             System.exit(1);  
         }  
     }  
-  
+
     @Override  
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {  
         HttpServletRequest httpReq = (HttpServletRequest) request;  
         HttpServletResponse httpResp = (HttpServletResponse) response;  
-  
+
         dispatcher.service(httpReq, httpResp);  
     }  
-  
+
     @Override  
     public void destroy() {  
         dispatcher.destroy();  
