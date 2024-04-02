@@ -6,7 +6,7 @@ title: hailinzeng (Hailin, Zeng)
 
 ### Welcome
 
-I'm Hailin Zeng, a Software Engineer. I am working for a startup company [ATEC](http://tukarla.com/).
+I'm Hailin Zeng, a Software Engineer.
 
 
 ### Links
