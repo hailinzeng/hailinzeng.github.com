@@ -36,7 +36,7 @@ github_user : hailinzeng
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://hailinzeng.github.com
+production_url : https://blog.hailinzeng.com
 site_url_short : hailinzeng.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
@@ -112,8 +112,8 @@ JB :
   #        
   analytics :
     provider : google 
-    google : 
-        tracking_id : 'UA-42120971-1'
+    google :
+        tracking_id : 'G-VJY7NVH7YK'
     getclicky :
       site_id : 
     mixpanel :
