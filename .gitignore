@@ -10,3 +10,6 @@ Thumbs.db
 
 .rbenv-version
 .rvmrc
+
+# Local agent context — used by pi only, not part of the site
+AGENTS.md
